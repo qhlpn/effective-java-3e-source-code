@@ -1,4 +1,5 @@
 package effectivejava.chapter8.item52;
+
 import java.util.*;
 
 // What does this program print? (Page 241)

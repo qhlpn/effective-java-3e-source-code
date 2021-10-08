@@ -1,4 +1,5 @@
 package effectivejava.chapter4.item18;
+
 import java.util.*;
 
 // Wrapper class - uses composition in place of inheritance  (Page 90)
@@ -9,14 +10,18 @@ public class InstrumentedSet<E> extends ForwardingSet<E> {
         super(s);
     }
 
-    @Override public boolean add(E e) {
+    @Override
+    public boolean add(E e) {
         addCount++;
         return super.add(e);
     }
-    @Override public boolean addAll(Collection<? extends E> c) {
+
+    @Override
+    public boolean addAll(Collection<? extends E> c) {
         addCount += c.size();
         return super.addAll(c);
     }
+
     public int getAddCount() {
         return addCount;
     }

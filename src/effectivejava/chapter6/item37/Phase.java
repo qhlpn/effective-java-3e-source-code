@@ -1,4 +1,5 @@
 package effectivejava.chapter6.item37;
+
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -7,6 +8,7 @@ import static java.util.stream.Collectors.*;
 // Using a nested EnumMap to associate data with enum pairs - (Pages 174-5)
 public enum Phase {
     SOLID, LIQUID, GAS;
+
     public enum Transition {
         MELT(SOLID, LIQUID), FREEZE(LIQUID, SOLID),
         BOIL(LIQUID, GAS), CONDENSE(GAS, LIQUID),
@@ -22,6 +24,7 @@ public enum Phase {
 
         private final Phase from;
         private final Phase to;
+
         Transition(Phase from, Phase to) {
             this.from = from;
             this.to = to;
@@ -33,7 +36,7 @@ public enum Phase {
                 () -> new EnumMap<>(Phase.class),
                 toMap(t -> t.to, t -> t,
                         (x, y) -> y, () -> new EnumMap<>(Phase.class))));
-        
+
         public static Transition from(Phase from, Phase to) {
             return m.get(from).get(to);
         }

@@ -1,4 +1,5 @@
 package effectivejava.chapter11.item79;
+
 import java.util.*;
 
 // More complex test of ObservableSet - Page 318-9

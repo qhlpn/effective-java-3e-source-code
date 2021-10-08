@@ -1,4 +1,5 @@
 package effectivejava.chapter11.item78.fixedstopthread1;
+
 import java.util.concurrent.*;
 
 // Properly synchronized cooperative thread termination

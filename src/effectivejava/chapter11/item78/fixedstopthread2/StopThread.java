@@ -1,4 +1,5 @@
 package effectivejava.chapter11.item78.fixedstopthread2;
+
 import java.util.concurrent.*;
 
 // Cooperative thread termination with a volatile field

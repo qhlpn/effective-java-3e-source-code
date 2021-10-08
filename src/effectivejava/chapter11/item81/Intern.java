@@ -1,4 +1,5 @@
 package effectivejava.chapter11.item81;
+
 import java.util.concurrent.*;
 
 // Concurrent canonicalizing map atop ConcurrentMap - Pages 273-274

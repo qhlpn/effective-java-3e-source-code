@@ -1,4 +1,5 @@
 package effectivejava.chapter5.item33;
+
 import java.util.*;
 
 // Typesafe heterogeneous container pattern (Pages 151-4)

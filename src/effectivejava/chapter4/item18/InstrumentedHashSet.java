@@ -1,4 +1,5 @@
 package effectivejava.chapter4.item18;
+
 import java.util.*;
 
 // Broken - Inappropriate use of inheritance! (Page 87)
@@ -13,12 +14,14 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
         super(initCap, loadFactor);
     }
 
-    @Override public boolean add(E e) {
+    @Override
+    public boolean add(E e) {
         addCount++;
         return super.add(e);
     }
 
-    @Override public boolean addAll(Collection<? extends E> c) {
+    @Override
+    public boolean addAll(Collection<? extends E> c) {
         addCount += c.size();
         return super.addAll(c);
     }

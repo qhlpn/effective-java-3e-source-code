@@ -1,4 +1,5 @@
 package effectivejava.chapter5.item31;
+
 import java.util.*;
 
 // Private helper method for wildcard capture (Page 145)

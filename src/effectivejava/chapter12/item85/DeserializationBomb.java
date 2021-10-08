@@ -1,4 +1,5 @@
 package effectivejava.chapter12.item85;
+
 import static effectivejava.chapter12.Util.*;
 
 import java.util.HashSet;

@@ -1,4 +1,5 @@
 package effectivejava.chapter8.item50;
+
 import java.util.*;
 
 // Two attacks on the internals of an "immutable" period (232-3)

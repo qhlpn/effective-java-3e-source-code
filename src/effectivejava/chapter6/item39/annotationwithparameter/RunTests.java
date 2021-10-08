@@ -1,6 +1,7 @@
 package effectivejava.chapter6.item39.annotationwithparameter;
 
 import effectivejava.chapter6.item39.markerannotation.Test;
+
 import java.lang.reflect.*;
 
 // Program to process marker annotations and annotations with a parameter (Page 184)

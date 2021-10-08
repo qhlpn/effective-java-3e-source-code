@@ -1,4 +1,5 @@
 package effectivejava.chapter6.item38;
+
 import java.util.*;
 
 // Emulated extensible enum (Pages 176-9)
@@ -14,10 +15,13 @@ public enum ExtendedOperation implements Operation {
         }
     };
     private final String symbol;
+
     ExtendedOperation(String symbol) {
         this.symbol = symbol;
     }
-    @Override public String toString() {
+
+    @Override
+    public String toString() {
         return symbol;
     }
 
@@ -40,6 +44,7 @@ public enum ExtendedOperation implements Operation {
         double y = Double.parseDouble(args[1]);
         test(Arrays.asList(ExtendedOperation.values()), x, y);
     }
+
     private static void test(Collection<? extends Operation> opSet,
                              double x, double y) {
         for (Operation op : opSet)

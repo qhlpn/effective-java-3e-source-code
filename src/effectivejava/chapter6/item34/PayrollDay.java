@@ -10,7 +10,9 @@ enum PayrollDay {
 
     private final PayType payType;
 
-    PayrollDay(PayType payType) { this.payType = payType; }
+    PayrollDay(PayType payType) {
+        this.payType = payType;
+    }
 
     int pay(int minutesWorked, int payRate) {
         return payType.pay(minutesWorked, payRate);
@@ -31,6 +33,7 @@ enum PayrollDay {
         };
 
         abstract int overtimePay(int mins, int payRate);
+
         private static final int MINS_PER_SHIFT = 8 * 60;
 
         int pay(int minsWorked, int payRate) {
