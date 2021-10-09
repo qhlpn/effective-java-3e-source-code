@@ -1,6 +1,6 @@
-package effectivejava.chapter2.item2.telescopingconstructor;
+package effectivejava.chapter2.item2.n1_telescopingconstructor;
 
-// Telescoping constructor pattern - does not scale well! (Pages 10-11)
+// 在面对多个构造函数参数时，重叠构造函数
 public class NutritionFacts {
     private final int servingSize;  // (mL)            required
     private final int servings;     // (per container) required

@@ -1,6 +1,6 @@
-package effectivejava.chapter2.item2.builder;
+package effectivejava.chapter2.item2.n3_builder;
 
-// Builder Pattern  (Page 13)
+// 在面对多个构造函数参数时，请考虑构建器 Builder 模式
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;

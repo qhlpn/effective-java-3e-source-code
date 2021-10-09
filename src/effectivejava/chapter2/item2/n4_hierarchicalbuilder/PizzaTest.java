@@ -1,9 +1,9 @@
-package effectivejava.chapter2.item2.hierarchicalbuilder;
+package effectivejava.chapter2.item2.n4_hierarchicalbuilder;
 
-import static effectivejava.chapter2.item2.hierarchicalbuilder.Pizza.Topping.*;
-import static effectivejava.chapter2.item2.hierarchicalbuilder.NyPizza.Size.*;
+import static effectivejava.chapter2.item2.n4_hierarchicalbuilder.Pizza.Topping.*;
+import static effectivejava.chapter2.item2.n4_hierarchicalbuilder.NyPizza.Size.*;
 
-// Using the hierarchical builder (Page 16)
+// builder 模式也适用于类层次结构
 public class PizzaTest {
     public static void main(String[] args) {
         NyPizza pizza = new NyPizza.Builder(SMALL)

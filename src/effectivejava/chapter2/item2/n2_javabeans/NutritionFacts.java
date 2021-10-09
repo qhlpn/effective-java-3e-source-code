@@ -1,6 +1,6 @@
-package effectivejava.chapter2.item2.javabeans;
+package effectivejava.chapter2.item2.n2_javabeans;
 
-// JavaBeans Pattern - allows inconsistency, mandates mutability  (pages 11-12)
+// 在面对多个构造函数参数时，JavaBean 模式 setter
 public class NutritionFacts {
     // Parameters initialized to default values (if any)
     private int servingSize = -1; // Required; no default value

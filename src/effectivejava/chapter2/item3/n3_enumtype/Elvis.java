@@ -1,11 +1,9 @@
-package effectivejava.chapter2.item3.field;
+package effectivejava.chapter2.item3.n3_enumtype;
 
-// Singleton with public final field  (Page 17)
-public class Elvis {
-    public static final Elvis INSTANCE = new Elvis();
+// 使用枚举类型实现单例
+public enum Elvis {
 
-    private Elvis() {
-    }
+    INSTANCE;
 
     public void leaveTheBuilding() {
         System.out.println("Whoa baby, I'm outta here!");

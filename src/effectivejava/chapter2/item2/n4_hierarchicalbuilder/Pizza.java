@@ -1,13 +1,13 @@
-package effectivejava.chapter2.item2.hierarchicalbuilder;
+package effectivejava.chapter2.item2.n4_hierarchicalbuilder;
 
 import java.util.*;
 
-// Builder pattern for class hierarchies (Page 14)
-
-// Note that the underlying "simulated self-type" idiom  allows for arbitrary fluid hierarchies, not just builders
 
 public abstract class Pizza {
-    public enum Topping {HAM, MUSHROOM, ONION, PEPPER, SAUSAGE}
+
+    public enum Topping {
+        HAM, MUSHROOM, ONION, PEPPER, SAUSAGE
+    }
 
     final Set<Topping> toppings;
 
