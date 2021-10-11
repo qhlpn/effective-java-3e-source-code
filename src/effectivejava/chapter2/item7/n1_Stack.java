@@ -2,13 +2,13 @@ package effectivejava.chapter2.item7;
 
 import java.util.*;
 
-// Can you spot the "memory leak"?  (Pages 26-27)
-public class Stack {
+// 记得消除过期的对象引用
+public class n1_Stack {
     private Object[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
-    public Stack() {
+    public n1_Stack() {
         elements = new Object[DEFAULT_INITIAL_CAPACITY];
     }
 
@@ -23,10 +23,6 @@ public class Stack {
         return elements[--size];
     }
 
-    /**
-     * Ensure space for at least one more element, roughly
-     * doubling the capacity each time the array needs to grow.
-     */
     private void ensureCapacity() {
         if (elements.length == size)
             elements = Arrays.copyOf(elements, 2 * size + 1);
@@ -42,11 +38,14 @@ public class Stack {
 //    }
 
     public static void main(String[] args) {
-        Stack stack = new Stack();
+        n1_Stack stack = new n1_Stack();
         for (String arg : args)
             stack.push(arg);
 
         while (true)
             System.err.println(stack.pop());
+    }
+
+    public static class EmptyStackException extends IllegalStateException {
     }
 }

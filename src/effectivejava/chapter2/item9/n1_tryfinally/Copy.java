@@ -1,4 +1,4 @@
-package effectivejava.chapter2.item9.tryfinally;
+package effectivejava.chapter2.item9.n1_tryfinally;
 
 import java.io.*;
 

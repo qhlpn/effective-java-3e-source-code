@@ -2,8 +2,8 @@ package effectivejava.chapter2.item6;
 
 import java.util.Comparator;
 
-// Hideously slow program! Can you spot the object creation? (Page 24)
-public class Sum {
+// 避免创建不必要对象： 谨慎自动装箱
+public class n2_Sum {
     private static long sum() {
         Long sum = 0L;
         for (long i = 0; i <= Integer.MAX_VALUE; i++)

@@ -2,8 +2,9 @@ package effectivejava.chapter2.item6;
 
 import java.util.regex.Pattern;
 
-// Reusing expensive object for improved performance (Pages 22 and 23)
-public class RomanNumerals {
+// 避免创建不必要对象
+public class n1_RomanNumerals {
+
     // Performance can be greatly improved! (Page 22)
     static boolean isRomanNumeralSlow(String s) {
         return s.matches("^(?=.)M*(C[MD]|D?C{0,3})"

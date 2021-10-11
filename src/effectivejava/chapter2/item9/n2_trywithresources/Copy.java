@@ -1,4 +1,4 @@
-package effectivejava.chapter2.item9.trywithresources;
+package effectivejava.chapter2.item9.n2_trywithresources;
 
 import java.io.*;
 
