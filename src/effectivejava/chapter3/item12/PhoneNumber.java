@@ -4,18 +4,12 @@ package effectivejava.chapter3.item12;
 // toString 方法应该返回对象中包含的所有值得关注的信息
 
 public final class PhoneNumber {
-    private final short areaCode, prefix, lineNum;
+    private final int areaCode, prefix, lineNum;
 
     public PhoneNumber(int areaCode, int prefix, int lineNum) {
-        this.areaCode = rangeCheck(areaCode, 999, "area code");
-        this.prefix = rangeCheck(prefix, 999, "prefix");
-        this.lineNum = rangeCheck(lineNum, 9999, "line num");
-    }
-
-    private static short rangeCheck(int val, int max, String arg) {
-        if (val < 0 || val > max)
-            throw new IllegalArgumentException(arg + ": " + val);
-        return (short) val;
+        this.areaCode = areaCode;
+        this.prefix = prefix;
+        this.lineNum = lineNum;
     }
 
     /**

@@ -2,13 +2,13 @@ package effectivejava.chapter3.item13;
 
 import java.util.Arrays;
 
-// A cloneable version of Stack (Pages 60-61)
-public class Stack implements Cloneable {
+// 深拷贝: 成员变量也需要拷贝新的
+public class n3_Stack implements Cloneable {
     private Object[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
-    public Stack() {
+    public n3_Stack() {
         this.elements = new Object[DEFAULT_INITIAL_CAPACITY];
     }
 
@@ -31,9 +31,9 @@ public class Stack implements Cloneable {
 
     // Clone method for class with references to mutable state
     @Override
-    public Stack clone() {
+    public n3_Stack clone() {
         try {
-            Stack result = (Stack) super.clone();
+            n3_Stack result = (n3_Stack) super.clone();
             result.elements = elements.clone();
             return result;
         } catch (CloneNotSupportedException e) {
@@ -49,14 +49,18 @@ public class Stack implements Cloneable {
 
     // To see that clone works, call with several command line arguments
     public static void main(String[] args) {
-        Stack stack = new Stack();
+        n3_Stack stack = new n3_Stack();
         for (String arg : args)
             stack.push(arg);
-        Stack copy = stack.clone();
+        n3_Stack copy = stack.clone();
         while (!stack.isEmpty())
             System.out.print(stack.pop() + " ");
         System.out.println();
         while (!copy.isEmpty())
             System.out.print(copy.pop() + " ");
     }
+
+    public static class EmptyStackException extends IllegalStateException {
+    }
+
 }

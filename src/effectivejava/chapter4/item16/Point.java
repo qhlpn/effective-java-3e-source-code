@@ -1,6 +1,6 @@
 package effectivejava.chapter4.item16;
 
-// Encapsulation of data by accessor methods and mutators  (Page 78)
+// 在公共类中，使用访问器方法，而不是公共字段
 class Point {
     private double x;
     private double y;
