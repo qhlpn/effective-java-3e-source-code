@@ -1,6 +1,12 @@
 package effectivejava.chapter4.item17;
 
-// Immutable complex number class (Pages 81-82)
+// 类应该是不可变的（线程安全、故障原子性），除非有很好的理由让它们可变
+// 要使类不可变，请遵循以下 5 条规则：
+// 1. 不要提供修改对象状态的方法
+// 2. 确保类不能被继承
+// 3. 所有字段用 final 修饰
+// 4. 所有字段设为私有
+// 5. 确保对任何可变组件的独占访问（如果你的类有任何引用可变对象的字段，请确保该类的客户端无法获得对这些对象的引用）
 public final class Complex {
     private final double re;
     private final double im;

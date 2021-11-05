@@ -1,8 +1,9 @@
-package effectivejava.chapter4.item22.constantutilityclass;
+package effectivejava.chapter4.item22;
 
 // Constant utility class (Page 108)
-public class PhysicalConstants {
-    private PhysicalConstants() {
+// 应该使用 不可实例化的工具类 导出常量
+public class n2_PhysicalConstants {
+    private n2_PhysicalConstants() {
     }  // Prevents instantiation
 
     // Avogadro's number (1/mol)

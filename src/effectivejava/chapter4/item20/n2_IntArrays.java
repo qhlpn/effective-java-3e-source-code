@@ -2,13 +2,12 @@ package effectivejava.chapter4.item20;
 
 import java.util.*;
 
-// Concrete implementation built atop skeletal implementation (Page 101)
-public class IntArrays {
+public class n2_IntArrays {
     static List<Integer> intArrayAsList(int[] a) {
         Objects.requireNonNull(a);
 
-        // The diamond operator is only legal here in Java 9 and later
-        // If you're using an earlier release, specify <Integer>
+        // 抽象骨架（无论是单独的抽象类，还是仅仅由接口上的默认方法组成）可以使程序员非常容易地提供他们自己的接口实现
+        // 例如，这里有一个静态工厂方法，它在 AbstractList（抽象骨架） 上包含一个完整的、功能完整的 List 实现
         return new AbstractList<>() {
             @Override
             public Integer get(int i) {
