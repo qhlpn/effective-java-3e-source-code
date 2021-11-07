@@ -1,16 +1,17 @@
-package effectivejava.chapter5.item29.technqiue2;
+package effectivejava.chapter5.item29;
 
 import java.util.Arrays;
 
-import effectivejava.chapter5.item29.EmptyStackException;
+// 消除 Stack 中泛型数组创建错误
+// 方式二  Generic stack using Object[] (Pages 130-3)
+public class n2_Stack<E> {
 
-// Generic stack using Object[] (Pages 130-3)
-public class Stack<E> {
+    // Object[]
     private Object[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
-    public Stack() {
+    public n2_Stack() {
         elements = new Object[DEFAULT_INITIAL_CAPACITY];
     }
 
@@ -25,8 +26,9 @@ public class Stack<E> {
             throw new EmptyStackException();
 
         // push requires elements to be of type E, so cast is correct
-        @SuppressWarnings("unchecked") E result =
-                (E) elements[--size];
+        // 由 push E 可以保障这里 强转
+        @SuppressWarnings("unchecked")
+        E result = (E) elements[--size];
 
         elements[size] = null; // Eliminate obsolete reference
         return result;
@@ -43,7 +45,7 @@ public class Stack<E> {
 
     // Little program to exercise our generic Stack
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<>();
+        n2_Stack<String> stack = new n2_Stack<>();
         for (String arg : args)
             stack.push(arg);
         while (!stack.isEmpty())

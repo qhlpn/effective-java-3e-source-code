@@ -1,11 +1,12 @@
-package effectivejava.chapter5.item29.technqiue1;
-
-import effectivejava.chapter5.item29.EmptyStackException;
+package effectivejava.chapter5.item29;
 
 import java.util.Arrays;
 
-// Generic stack using E[] (Pages 130-3)
-public class Stack<E> {
+// 消除 Stack 中泛型数组创建错误
+// 方式一   Generic stack using E[] (Pages 130-3)
+public class n1_Stack<E> {
+
+    // E[]
     private E[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
@@ -14,8 +15,11 @@ public class Stack<E> {
     // This is sufficient to ensure type safety, but the runtime
     // type of the array won't be E[]; it will always be Object[]!
     @SuppressWarnings("unchecked")
-    public Stack() {
+    public n1_Stack() {
+        // 由 push E 可以保障这里 强转
         elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
+        // 无法创建非具体化类型的数组
+        // elements = new E[DEFAULT_INITIAL_CAPACITY] // 编译出错
     }
 
     public void push(E e) {
@@ -42,7 +46,7 @@ public class Stack<E> {
 
     // Little program to exercise our generic Stack
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<>();
+        n1_Stack<String> stack = new n1_Stack<>();
         for (String arg : args)
             stack.push(arg);
         while (!stack.isEmpty())
