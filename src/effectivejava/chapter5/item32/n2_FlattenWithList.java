@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 // List as a typesafe alternative to a generic varargs parameter (page 149)
-public class FlattenWithList {
+public class n2_FlattenWithList {
+
+    // 也可以用 List 参数替换 可变参数 解决警告
     static <T> List<T> flatten(List<List<? extends T>> lists) {
         List<T> result = new ArrayList<>();
         for (List<? extends T> list : lists)

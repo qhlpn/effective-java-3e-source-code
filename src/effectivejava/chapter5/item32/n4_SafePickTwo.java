@@ -1,11 +1,10 @@
 package effectivejava.chapter5.item32;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 // Safe version of PickTwo using lists instead of arrays (Page 150)
-public class SafePickTwo {
+public class n4_SafePickTwo {
     static <T> List<T> pickTwo(T a, T b, T c) {
         switch (ThreadLocalRandom.current().nextInt(3)) {
             case 0:

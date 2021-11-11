@@ -25,7 +25,9 @@ public class n1_Main {
         ArrayList<? extends Object> o2 = new ArrayList<Long>();
 
         // 泛型数组 是不合法的
-        // List<String>[] stringLists = new List<String>[1];  // 编译出错
+//         List<String>[] stringLists = new List<String>[1];  // 编译出错
+//         List<String>[] stringLists = (List<String>[]) new Object[1];  // 编译成功
+
 
         // 泛型是由擦除实现的
         // List<Integer> 实例的运行时类型是 List，List<String>[] 实例的运行时类型是 List[]

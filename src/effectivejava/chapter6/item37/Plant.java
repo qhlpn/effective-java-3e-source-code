@@ -5,9 +5,7 @@ import java.util.*;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toSet;
 
-// Using an EnumMap to associate data with an enum (Pages 171-3)
-
-// Simplistic class representing a plant (Page 171)
+// 使用 EnumMap 替换序数索引
 class Plant {
     enum LifeCycle {ANNUAL, PERENNIAL, BIENNIAL}
 
