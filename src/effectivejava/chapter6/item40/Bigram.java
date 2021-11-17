@@ -1,8 +1,10 @@
 package effectivejava.chapter6.item40;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
-// Can you spot the bug? (Page 188)
+// 坚持使用 @Override 注解
+// 编译器可以帮助你减少受到有害错误的影响
 public class Bigram {
     private final char first;
     private final char second;
@@ -12,10 +14,15 @@ public class Bigram {
         this.second = second;
     }
 
-    public boolean equals(Bigram b) {
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Bigram))
+            return false;
+        Bigram b = (Bigram) o;
         return b.first == first && b.second == second;
     }
 
+    @Override
     public int hashCode() {
         return 31 * first + second;
     }
