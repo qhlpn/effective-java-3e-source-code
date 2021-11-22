@@ -14,7 +14,7 @@ public class Main {
     // Parallel stream-based program to generate the first 20 Mersenne primes - HANGS!!! (Page 222)
     // 这是怎么回事？简单地说，stream 库不知道如何并行化这个管道，因此启发式会失败。
     // 这个故事的寓意很简单：不要不加区别地将流管道并行化。 性能后果可能是灾难性的。
-    public class ParallelMersennePrimes {
+    public static class ParallelMersennePrimes {
         public static void main(String[] args) {
             primes().map(p -> TWO.pow(p.intValueExact()).subtract(ONE))
                     .parallel()

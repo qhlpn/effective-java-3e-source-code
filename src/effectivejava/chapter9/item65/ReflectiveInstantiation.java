@@ -5,6 +5,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Set;
 
+// 接口优于反射
+// 反射是一种功能强大的工具，对于某些复杂的系统编程任务是必需的
+// 但是它有很多缺点（很多编译期无法捕获的异常）
+// 可以用反射方式创建实例，并通过它们的接口或超类正常地访问它们
 // Reflective instantiaion demo (Page 283)
 public class ReflectiveInstantiation {
     // Reflective instantiation with interface access
@@ -12,8 +16,8 @@ public class ReflectiveInstantiation {
         // Translate the class name into a Class object
         Class<? extends Set<String>> cl = null;
         try {
-            cl = (Class<? extends Set<String>>)  // Unchecked cast!
-                    Class.forName(args[0]);
+            // // Unchecked cast!
+            cl = (Class<? extends Set<String>>) Class.forName(args[0]);
         } catch (ClassNotFoundException e) {
             fatalError("Class not found.");
         }
