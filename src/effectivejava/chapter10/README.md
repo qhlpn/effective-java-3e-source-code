@@ -11,3 +11,17 @@ Item 74: Document all exceptions thrown by each method（为每个方法记录�
 Item 75: Include failure capture information in detail messages（异常详细消息中应包含捕获失败的信息）
 Item 76: Strive for failure atomicity（尽力保证故障原子性）
 Item 77: Don’t ignore exceptions（不要忽略异常）
+
+
+
+                    Throwable
+
+        Error                      Exception
+   
+                
+                       RuntimeException   other-exception
+
+
+首先，Throwable标志这是一个异常。
+其次，Throwable有两个子类分别是Error和Exception，Error表示的是JVM发生的异常，如内存溢出，这是应用自身程序本身无法处理的异常；而Exception则表示应用程序自身可以处理的异常。
+最后，Exception的子类分为两类，一个是RuntimeException，另外就是其他继承自Exception的异常，如IOException。区分这两类异常主要特性是是否受检。

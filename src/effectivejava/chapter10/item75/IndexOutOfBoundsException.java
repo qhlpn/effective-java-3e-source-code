@@ -1,5 +1,6 @@
-package effectivejava.chapter10.item74;
+package effectivejava.chapter10.item75;
 
+// 异常详细消息中应包含捕获失败的信息
 public class IndexOutOfBoundsException extends RuntimeException {
     private final int lowerBound;
     private final int upperBound;

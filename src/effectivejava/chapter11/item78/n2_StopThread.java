@@ -1,9 +1,10 @@
-package effectivejava.chapter11.item78.fixedstopthread1;
+package effectivejava.chapter11.item78;
 
 import java.util.concurrent.*;
 
+// 加锁
 // Properly synchronized cooperative thread termination
-public class StopThread {
+public class n2_StopThread {
     private static boolean stopRequested;
 
     private static synchronized void requestStop() {

@@ -1,5 +1,114 @@
-# Effective Java, Third Edition
+## 目录（Contents）
 
-![EJ3e Book Cover](https://www.pearsonhighered.com/assets/bigcovers/0/1/3/4/0134685997.jpg)
-
-## Hot News! Source code finally available on GitHub. Happy Hacking!
+- **Chapter 2. Creating and Destroying Objects（创建和销毁对象）**
+  - Chapter 2 Introduction（章节介绍）
+  - Item 1: Consider static factory methods instead of constructors（考虑以静态工厂方法代替构造函数）
+  - Item 2: Consider a builder when faced with many constructor parameters（在面对多个构造函数参数时，请考虑构建器）
+  - Item 3: Enforce the singleton property with a private constructor or an enum type（使用私有构造函数或枚举类型实施单例属性）
+  - Item 4: Enforce noninstantiability with a private constructor（用私有构造函数实施不可实例化）
+  - Item 5: Prefer dependency injection to hardwiring resources（依赖注入优于硬连接资源）
+  - Item 6: Avoid creating unnecessary objects（避免创建不必要的对象）
+  - Item 7: Eliminate obsolete object references（排除过时的对象引用）
+  - Item 8: Avoid finalizers and cleaners（避免使用终结器和清除器）
+  - Item 9: Prefer try with resources to try finally（使用 try-with-resources 优于 try-finally）
+- **Chapter 3. Methods Common to All Objects（对象的通用方法）**
+  - Chapter 3 Introduction（章节介绍）
+  - Item 10: Obey the general contract when overriding equals（覆盖 equals 方法时应遵守的约定）
+  - Item 11: Always override hashCode when you override equals（当覆盖 equals 方法时，总要覆盖 hashCode 方法）
+  - Item 12: Always override toString（始终覆盖 toString 方法）
+  - Item 13: Override clone judiciously（明智地覆盖 clone 方法）
+  - Item 14: Consider implementing Comparable（考虑实现 Comparable 接口）
+- **Chapter 4. Classes and Interfaces（类和接口）**
+  - Chapter 4 Introduction（章节介绍）
+  - Item 15: Minimize the accessibility of classes and members（尽量减少类和成员的可访问性）
+  - Item 16: In public classes use accessor methods not public fields（在公共类中，使用访问器方法，而不是公共字段）
+  - Item 17: Minimize mutability（减少可变性）
+  - Item 18: Favor composition over inheritance（优先选择复合而不是继承）
+  - Item 19: Design and document for inheritance or else prohibit it（继承要设计良好并且具有文档，否则禁止使用）
+  - Item 20: Prefer interfaces to abstract classes（接口优于抽象类）
+  - Item 21: Design interfaces for posterity（为后代设计接口）
+  - Item 22: Use interfaces only to define types（接口只用于定义类型）
+  - Item 23: Prefer class hierarchies to tagged classes（类层次结构优于带标签的类）
+  - Item 24: Favor static member classes over nonstatic（静态成员类优于非静态成员类）
+  - Item 25: Limit source files to a single top level class（源文件仅限有单个顶层类）
+- **Chapter 5. Generics（泛型）**
+  - Chapter 5 Introduction（章节介绍）
+  - Item 26: Do not use raw types（不要使用原始类型）
+  - Item 27: Eliminate unchecked warnings（消除 unchecked 警告）
+  - Item 28: Prefer lists to arrays（list 优于数组）
+  - Item 29: Favor generic types（优先使用泛型）
+  - Item 30: Favor generic methods（优先使用泛型方法）
+  - Item 31: Use bounded wildcards to increase API flexibility（使用有界通配符增加 API 的灵活性）
+  - Item 32: Combine generics and varargs judiciously（明智地合用泛型和可变参数）
+  - Item 33: Consider typesafe heterogeneous containers（考虑类型安全的异构容器）
+- **Chapter 6. Enums and Annotations（枚举和注解）**
+  - Chapter 6 Introduction（章节介绍）
+  - Item 34: Use enums instead of int constants（用枚举类型代替 int 常量）
+  - Item 35: Use instance fields instead of ordinals（使用实例字段替代序数）
+  - Item 36: Use EnumSet instead of bit fields（用 EnumSet 替代位字段）
+  - Item 37: Use EnumMap instead of ordinal indexing（使用 EnumMap 替换序数索引）
+  - Item 38: Emulate extensible enums with interfaces（使用接口模拟可扩展枚举）
+  - Item 39: Prefer annotations to naming patterns（注解优于命名模式）
+  - Item 40: Consistently use the Override annotation（坚持使用 @Override 注解）
+  - Item 41: Use marker interfaces to define types（使用标记接口定义类型）
+- **Chapter 7. Lambdas and Streams（λ 表达式和流）**
+  - Chapter 7 Introduction（章节介绍）
+  - Item 42: Prefer lambdas to anonymous classes（λ 表达式优于匿名类）
+  - Item 43: Prefer method references to lambdas（方法引用优于 λ 表达式）
+  - Item 44: Favor the use of standard functional interfaces（优先使用标准函数式接口）
+  - Item 45: Use streams judiciously（明智地使用流）
+  - Item 46: Prefer side effect free functions in streams（在流中使用无副作用的函数）
+  - Item 47: Prefer Collection to Stream as a return type（优先选择 Collection 而不是流作为返回类型）
+  - Item 48: Use caution when making streams parallel（谨慎使用并行流）
+- **Chapter 8. Methods（方法）**
+  - Chapter 8 Introduction（章节介绍）
+  - Item 49: Check parameters for validity（检查参数的有效性）
+  - Item 50: Make defensive copies when needed（在需要时制作防御性副本）
+  - Item 51: Design method signatures carefully（仔细设计方法签名）
+  - Item 52: Use overloading judiciously（明智地使用重载）
+  - Item 53: Use varargs judiciously（明智地使用可变参数）
+  - Item 54: Return empty collections or arrays, not nulls（返回空集合或数组，而不是 null）
+  - Item 55: Return optionals judiciously（明智地的返回 Optional）
+  - Item 56: Write doc comments for all exposed API elements（为所有公开的 API 元素编写文档注释）
+- **Chapter 9. General Programming（通用程序设计）**
+  - Chapter 9 Introduction（章节介绍）
+  - Item 57: Minimize the scope of local variables（将局部变量的作用域最小化）
+  - Item 58: Prefer for-each loops to traditional for loops（for-each 循环优于传统的 for 循环）
+  - Item 59: Know and use the libraries（了解并使用库）
+  - Item 60: Avoid float and double if exact answers are required（若需要精确答案就应避免使用 float 和 double 类型）
+  - Item 61: Prefer primitive types to boxed primitives（基本数据类型优于包装类）
+  - Item 62: Avoid strings where other types are more appropriate（其他类型更合适时应避免使用字符串）
+  - Item 63: Beware the performance of string concatenation（当心字符串连接引起的性能问题）
+  - Item 64: Refer to objects by their interfaces（通过接口引用对象）
+  - Item 65: Prefer interfaces to reflection（接口优于反射）
+  - Item 66: Use native methods judiciously（明智地使用本地方法）
+  - Item 67: Optimize judiciously（明智地进行优化）
+  - Item 68: Adhere to generally accepted naming conventions（遵守被广泛认可的命名约定）
+- **Chapter 10. Exceptions（异常）**
+  - Chapter 10 Introduction（章节介绍）
+  - Item 69: Use exceptions only for exceptional conditions（仅在确有异常条件下使用异常）
+  - Item 70: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors（对可恢复情况使用 checked 异常，对编程错误使用运行时异常）
+  - Item 71: Avoid unnecessary use of checked exceptions（避免不必要地使用 checked 异常）
+  - Item 72: Favor the use of standard exceptions（鼓励复用标准异常）
+  - Item 73: Throw exceptions appropriate to the abstraction（抛出能用抽象解释的异常）
+  - Item 74: Document all exceptions thrown by each method（为每个方法记录会抛出的所有异常）
+  - Item 75: Include failure capture information in detail messages（异常详细消息中应包含捕获失败的信息）
+  - Item 76: Strive for failure atomicity（尽力保证故障原子性）
+  - Item 77: Don’t ignore exceptions（不要忽略异常）
+- **Chapter 11. Concurrency（并发）**
+  - Chapter 11 Introduction（章节介绍）
+  - Item 78: Synchronize access to shared mutable data（对共享可变数据的同步访问）
+  - Item 79: Avoid excessive synchronization（避免过度同步）
+  - Item 80: Prefer executors, tasks, and streams to threads（Executor、task、流优于直接使用线程）
+  - Item 81: Prefer concurrency utilities to wait and notify（并发实用工具优于 wait 和 notify）
+  - Item 82: Document thread safety（文档应包含线程安全属性）
+  - Item 83: Use lazy initialization judiciously（明智地使用延迟初始化）
+  - Item 84: Don’t depend on the thread scheduler（不要依赖线程调度器）
+- **Chapter 12. Serialization（序列化）**
+  - Chapter 12 Introduction（章节介绍）
+  - Item 85: Prefer alternatives to Java serialization（Java 序列化的替代方案）
+  - Item 86: Implement Serializable with great caution（非常谨慎地实现 Serializable）
+  - Item 87: Consider using a custom serialized form（考虑使用自定义序列化形式）
+  - Item 88: Write readObject methods defensively（防御性地编写 readObject 方法）
+  - Item 89: For instance control, prefer enum types to readResolve（对于实例控制，枚举类型优于 readResolve）
+  - Item 90: Consider serialization proxies instead of serialized instances（考虑以序列化代理代替序列化实例）

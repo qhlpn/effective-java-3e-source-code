@@ -1,9 +1,10 @@
-package effectivejava.chapter11.item78.fixedstopthread2;
+package effectivejava.chapter11.item78;
 
 import java.util.concurrent.*;
 
+// 加 volatile
 // Cooperative thread termination with a volatile field
-public class StopThread {
+public class n3_StopThread {
     private static volatile boolean stopRequested;
 
     public static void main(String[] args)
