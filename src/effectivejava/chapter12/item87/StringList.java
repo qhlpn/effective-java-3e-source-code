@@ -2,8 +2,14 @@ package effectivejava.chapter12.item87;
 
 import java.io.*;
 
+// 考虑使用自定义序列化形式
+// 只有在合理描述对象的逻辑状态时，才使用默认的序列化形式
+
 // StringList with a reasonable custom serialized form  - Page 349
 public final class StringList implements Serializable {
+
+    // 将不需要序列化的属性前添加关键字transient，序列化 Serializable 对象的时候，这个属性就不会序列化
+    // 若实现的是 Externalizable 接口，则没有任何东西可以自动序列化，需要在 writeExternal 方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
     private transient int size = 0;
     private transient Entry head = null;
 
